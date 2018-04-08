@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>jQuery demo!</title>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                $('#clickbutton').click(function(){
+                    alert('You CLICKED the button!');
+                })
+
+                $('#hidebutton').click(function(){
+                    $("#hide").hide();
+                })
+                $('#showbutton').click(function(){
+                    $("#show").show();
+                })
+                $('#togglebutton').click(function(){
+                    $(".toggle").toggle();
+                })
+                $('#slidedownbutton').click(function(){
+                    $("#slidedown").slideDown();
+                })
+                $('#slideupbutton').click(function(){
+                    $("#slideup").slideUp();
+                })
+                $('#slidetogglebutton').click(function(){
+                    $(".slidetoggle").slideToggle();
+                })
+                $('#fadeinbutton').click(function(){
+                    $("#fadein").fadeIn(2000);
+                })
+                $('#fadeoutbutton').click(function(){
+                    $("#fadeout").fadeOut(1500);
+                })
+                $('#addclassbutton').click(function(){
+                    $(".addclass").addClass("selected");
+                })
+                $('#beforebutton').click(function(){
+                    $("#before").before("this paragraph was first");
+                })
+                $('#afterbutton').click(function(){
+                    $("#after").after("this paragraph is after");
+                })
+                $('#appendbutton').click(function(){
+                    $("#append").append("!!!");
+                })
+                $('#htmlbutton').click(function(){
+                    $("#html").html("<i>This paragraph is modded</i>");
+                })
+                $('#attrbutton').click(function(){
+                    $('#attr').text($("#attr").attr('href'));
+                })
+                $('#valarea').keyup(function(){
+                    $("#val").text($('#valarea').val());
+                })
+                $('#textbutton').click(function(){
+                    $("#text").text("<i>This paragraph is modded</i>");
+                })
+                $('#databutton').click(function(){
+                    $("#div").data("test", {first: "Johnnie", last: "Thinh"});
+                    $("span:first").text( $("#div").data("test").first);
+                    $("span:last").text( $("#div").data("test").last);
+                })
+
+
+
+
+
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class = "div">
+            <h1>Click</h1>
+            <button id = "clickbutton" type ="button">CLICK BUTTON</button>
+            <p>Click the button to show alert</p>
+        </div>
+
+        <div class = "div">
+            <h1>Hide</h1>
+            <button id = "hidebutton" type ="button">HIDE BUTTON</button>
+            <p id = "hide">Click the button to hide this paragraph</p>
+        </div>
+
+        <div class = "div">
+            <h1>Show</h1>
+            <button id = "showbutton" type ="button">SHOW BUTTON</button>
+            <p id ="show">You clicked the button to see this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Toggle</h1>
+            <button id ="togglebutton" type ="button">TOGGLE BUTTON</button>
+            <p class ="toggle" id= "toggle1">Toggle me!</p>
+            <p class = "toggle" id= "toggle2">You clicked the toggle button to see this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Slide Down</h1>
+            <button id ="slidedownbutton" type="button">SLIDE DOWN BUTTON</button>
+            <p id="slidedown">Hidden paragraph is slid down</p>
+        </div>
+        <div class = "div">
+            <h1>Slide Up</h1>
+            <button id ="slideupbutton" type ="button">SLIDE UP BUTTON</button>
+            <p  id="slideup">Click the button to slide up this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Slide Toggle</h1>
+            <button id ="slidetogglebutton" type ="button">SLIDE TOGGLE BUTTON</button>
+            <p class = "slidetoggle">Slide toggle me!</p>
+            <p class = "slidetoggle" id= "slidetoggle2">You clicked the toggle button to see this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Fade In</h1>
+            <button id ="fadeinbutton" type ="button">FADE IN BUTTON</button>
+            <p id ="fadein">You clicked to display the hiddend message that was faded in</p>
+        </div>
+        <div class = "div">
+            <h1>Fade Out</h1>
+            <button id ="fadeoutbutton" type ="button">FADE OUT BUTTON</button>
+            <p id ="fadeout">Click the button to fade out this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Add Class</h1>
+            <button id ="addclassbutton" type ="button">ADD CLASS BUTTON</button>
+            <p class ="addclass">Click the button to add class 'red' to this paragraph</p>
+            
+        </div>
+        <div class = "div">
+            <h1>Before</h1>
+            <button id ="beforebutton" type ="button">BEFORE BUTTON</button>
+            <p id="before">Click the button because this paragraph is second</p>
+        </div>
+        <div class = "div">
+            <h1>After</h1>
+            <button id ="afterbutton" type ="button">AFTER BUTTON</button>
+            <p id ="after">Click the button to see the after paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Append</h1>
+            <button id = "appendbutton" type ="button">APPEND BUTTON</button>
+            <p id ="append">Click the button to add exclamation points to this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>HTML</h1>
+            <button id ="htmlbutton" type ="button">CLICK</button>
+            <p id= "html">Click the button to mod this paragraph</p>
+        </div>
+        <div class = "div">
+            <h1>Attr</h1>
+            <button id ="attrbutton" type ="button">CLICK</button>
+            <p><a id ="attr" href ="http://www.google.com">Click the button to see the link</a></p>
+        </div>
+        <div class = "div">
+            <h1>Val</h1>
+            <input type="text" id ="valarea" value="type something">
+
+            <p id="val">Type in the area to see what you are typing</p>
+        </div>
+        <div class = "div">
+            <h1>Text</h1>
+            <button id ="textbutton" type ="button">TEXT BUTTON</button>
+            <p id ="text">Click the button to mod this paragraph</p>
+        </div>
+        <div id ="div" class = "div">
+            <h1>Data</h1>
+            <button id = "databutton" type ="button">DATA BUTTON</button>
+            <p id="data">Click the button to see the values. First: <span></span> Second: <span></span></p>
+        </div>
+
+    </body>
+</html>
